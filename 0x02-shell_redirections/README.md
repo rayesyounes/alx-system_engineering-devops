@@ -1,4 +1,4 @@
-# 0x00 Shell Redirection
+# 0x02 Shell Redirection
 
 This repository contains the solutions to the tasks in the **0x00 Shell Redirection** project of the ALX System Engineering and DevOps program.
 
