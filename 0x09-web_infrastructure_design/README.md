@@ -18,14 +18,7 @@
 * [High availability cluster (active-active/active-passive)](https://intranet.alxswe.com/rltoken/TAJeVYy9U9iLaEDd6XkbRA)
 * [What is HTTPS](https://intranet.alxswe.com/rltoken/c0zs2MxrmxFLsCPOizxq6g)
 * [What is a firewall](https://intranet.alxswe.com/rltoken/j6idMcUTyNEDj1oYDQFmUw)
-## Learning Objectives
 
-### General
-
-* You must be able to draw a diagram covering the web stack you built with the sysadmin/devops track projects
-* You must be able to explain what each component is doing
-* You must be able to explain system redundancy
-* Know all the mentioned acronyms: LAMP, SPOF, QPS
 ## Tasks
 
 | Task | File |
