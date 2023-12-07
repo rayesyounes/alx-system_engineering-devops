@@ -10,3 +10,4 @@ elif [ "$#" -eq 2 ]; then
     subdomain=$2
     echo "$(dig $subdomain.$1 | awk '/ANSWER SECTION:/ {getline; print "The subdomain '"$subdomain"' is a "$4" record and points to "$5}')"
 fi
+
