@@ -34,12 +34,10 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-
-
 listen myserver
         bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/www.spoutnikrs.tech.pem
         redirect scheme https code 301 if !{ ssl_fc }
         balance roundrobin
-        server server1 100.25.29.81:80 check
-        server server2 100.25.204.214:80 check
+        server server1 54.165.75.147:80 check
+        server server2 54.196.28.207:80 check
