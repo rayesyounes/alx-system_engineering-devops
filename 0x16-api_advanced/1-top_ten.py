@@ -1,19 +1,25 @@
 #!/usr/bin/python3
 """
-this doc for module
+Module Docs
 """
 import requests
 
-headers = {"User-Agent": "MyCustomUserAgent/1.0"}
-
 
 def top_ten(subreddit):
-    """method doc"""
-    url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
-    response = requests.get(url, allow_redirects=False, headers=headers)
+    """
+    Function Docs
+    """
+    url = 'https://www.reddit.com'
+    header = {
+        'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    }
+    response = requests.get('{}/r/{}/.json?sort={}&limit={}'.format(
+        url, subreddit, 'top', 10),
+        headers=header,
+        allow_redirects=False)
     if response.status_code == 200:
-        data = response.json()
-        for post in data["data"]["children"]:
-            print(post["data"]["title"])
+        for post in response.json()['data']['children'][0:10]:
+            print(post['data']['title'])
     else:
-        print("None")
+        print(None)
