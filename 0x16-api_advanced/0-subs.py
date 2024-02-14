@@ -14,5 +14,9 @@ def number_of_subscribers(subreddit):
     if response.status_code == 200:
         data = response.json()
         return data["data"]["subscribers"]
+    elif response.status_code == 302:  # Check for redirection
+        print("Subreddit doesn't exist or URL is incorrect")
+        return 0
     else:
+        print("Error:", response.status_code)
         return 0

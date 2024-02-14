@@ -20,7 +20,8 @@ def recurse(subreddit, after=None):
             return all_posts
         for post in data["data"]["children"]:
             all_posts.append(post["data"]["title"])
-        next = recurse(subreddit, after)
+        next = recurse(subreddit, after)  # Recursive call
         all_posts.extend(next)
         return all_posts
-    return None#!/usr/bin/python3
+    return None
+
